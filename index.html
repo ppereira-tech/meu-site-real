@@ -171,6 +171,24 @@
             color: var(--primary-blue);
         }
 
+        /* Stats Section */
+        .stats {
+            background-color: #1e293b;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 3.5rem;
+            color: var(--primary-blue);
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
         /* Footer */
         footer {
             background-color: #020617;
@@ -235,6 +253,23 @@
         </div>
     </section>
 
+    <section class="stats" id="stats">
+        <div class="grid" style="max-width: 1200px; margin: 0 auto;">
+            <div class="stat-item">
+                <h2><span class="counter" data-target="500">0</span></h2>
+                <p>Clientes Atendidos</p>
+            </div>
+            <div class="stat-item">
+                <h2><span class="counter" data-target="98">0</span>%</h2>
+                <p>Satisfação</p>
+            </div>
+            <div class="stat-item">
+                <h2><span class="counter" data-target="10">0</span></h2>
+                <p>Anos de Experiência</p>
+            </div>
+        </div>
+    </section>
+
     <section class="testimonials" id="depoimentos">
         <h2 class="section-title">Depoimentos</h2>
         <div class="grid">
@@ -263,5 +298,38 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 100; // Velocidade da animação
+
+        const startCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = Math.max(1, target / speed);
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Inicia a animação apenas quando a seção estiver visível
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                startCounters();
+                observer.disconnect(); // Roda apenas uma vez
+            }
+        }, { threshold: 0.5 });
+
+        observer.observe(document.querySelector('.stats'));
+    </script>
 </body>
 </html>
