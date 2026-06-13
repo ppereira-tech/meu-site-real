@@ -3,20 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Profissional | Soluções Digitais</title>
     <title>Emagreça com Saúde | Método Natural</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --primary-blue: #3b82f6;
-            --hover-blue: #2563eb;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
             --primary-green: #22c55e;
@@ -33,7 +25,6 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -46,11 +37,9 @@
             position: fixed;
             width: 100%;
             top: 0;
-            background: rgba(15, 23, 42, 0.9);
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
@@ -66,7 +55,6 @@
         .logo {
             font-weight: 700;
             font-size: 1.5rem;
-            color: var(--primary-blue);
             color: var(--primary-green);
         }
 
@@ -84,7 +72,6 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary-blue);
             color: var(--primary-green);
         }
 
@@ -96,7 +83,6 @@
             justify-content: center;
             text-align: center;
             padding: 0 2rem;
-            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent);
             background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.1), transparent);
         }
 
@@ -119,7 +105,6 @@
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background-color: var(--primary-blue);
             background-color: var(--primary-green);
             color: white;
             text-decoration: none;
@@ -131,7 +116,6 @@
         }
 
         .cta-button:hover {
-            background-color: var(--hover-blue);
             background-color: var(--hover-green);
             transform: translateY(-2px);
         }
@@ -159,8 +143,6 @@
             background-color: var(--card-bg);
             padding: 2.5rem;
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s;
             border: 1px solid rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -168,13 +150,11 @@
 
         .card:hover {
             transform: translateY(-10px);
-            border-color: var(--primary-blue);
             border-color: var(--primary-green);
         }
 
         .card h3 {
             margin-bottom: 1rem;
-            color: var(--primary-blue);
             color: var(--primary-green);
         }
 
@@ -192,13 +172,11 @@
 
         .testimonial-author {
             font-weight: 600;
-            color: var(--primary-blue);
             color: var(--primary-green);
         }
 
         /* Stats Section */
         .stats {
-            background-color: #1e293b;
             background-color: var(--white);
             padding: 6rem 2rem;
             text-align: center;
@@ -206,7 +184,6 @@
 
         .stat-item h2 {
             font-size: 3.5rem;
-            color: var(--primary-blue);
             color: var(--primary-green);
         }
 
@@ -317,11 +294,9 @@
 
         /* Footer */
         footer {
-            background-color: #020617;
             background-color: #f8fafc;
             padding: 4rem 2rem;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
             border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
 
@@ -346,7 +321,6 @@
 <body>
     <header>
         <nav>
-            <div class="logo">BLUECORE</div>
             <div class="logo">SALUDAVE</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -359,8 +333,6 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Transforme seu Negócio Online</h1>
-            <p>Criamos soluções tecnológicas modernas e escaláveis para impulsionar o seu negócio ao próximo nível.</p>
             <h1>Emagreça com Saúde</h1>
             <p>Descubra o método comprovado para alcançar seu peso ideal com saúde e disposição.</p>
             <a href="#beneficios" class="cta-button">Começar Agora</a>
@@ -375,24 +347,17 @@
     </section>
 
     <section class="benefits" id="beneficios">
-        <h2 class="section-title">Nossos Benefícios</h2>
         <h2 class="section-title">Por que nos escolher?</h2>
         <div class="grid">
             <div class="card">
-                <h3>Design Moderno</h3>
-                <p>Interfaces intuitivas e atraentes que garantem a melhor experiência para o seu usuário final.</p>
                 <h3>Nutrição Consciente</h3>
                 <p>Planos alimentares baseados em comida de verdade, sem restrições absurdas.</p>
             </div>
             <div class="card">
-                <h3>Alta Performance</h3>
-                <p>Código otimizado para carregamento instantâneo, garantindo que você nunca perca um cliente.</p>
                 <h3>Foco no Bem-estar</h3>
                 <p>Metodologia que prioriza sua saúde mental e física em todas as etapas.</p>
             </div>
             <div class="card">
-                <h3>Responsividade</h3>
-                <p>Seu site perfeito em qualquer dispositivo, desde smartphones até monitores de alta resolução.</p>
                 <h3>Suporte Contínuo</h3>
                 <p>Acompanhamento diário para tirar dúvidas e manter sua motivação no topo.</p>
             </div>
@@ -429,20 +394,14 @@
         <h2 class="section-title">Depoimentos</h2>
         <div class="grid">
             <div class="card">
-                <p class="testimonial-text">"A BlueCore transformou completamente nossa operação digital. O resultado superou nossas expectativas."</p>
-                <p class="testimonial-author">- João Silva, CEO TechInova</p>
                 <p class="testimonial-text">"Perdi 8kg em 2 meses e nunca me senti tão disposta!"</p>
                 <p class="testimonial-author">- João Silva</p>
             </div>
             <div class="card">
-                <p class="testimonial-text">"Excelente suporte e entrega rápida. O design moderno atraiu muitos novos clientes para nossa loja."</p>
-                <p class="testimonial-author">- Maria Oliveira, FashionHub</p>
                 <p class="testimonial-text">"O melhor investimento que fiz na minha saúde este ano."</p>
                 <p class="testimonial-author">- Maria Oliveira</p>
             </div>
             <div class="card">
-                <p class="testimonial-text">"A performance do nosso site melhorou drasticamente. Recomendo fortemente para qualquer empresa."</p>
-                <p class="testimonial-author">- Pedro Santos, Diretor de Marketing</p>
                 <p class="testimonial-text">"Método simples e fácil de seguir no dia a dia corrido."</p>
                 <p class="testimonial-author">- Pedro Santos</p>
             </div>
@@ -493,13 +452,10 @@
 
     <footer id="contato">
         <div class="footer-content">
-            <div class="logo">BLUECORE</div>
             <div class="logo">SALUDAVE</div>
             <div class="contact-info">
-                <p>contato@bluecore.com.br</p>
                 <p>contato@saludave.com.br</p>
                 <p>+55 (11) 99999-9999</p>
-                <p style="margin-top: 1rem; font-size: 0.8rem;">&copy; 2024 BlueCore Digital. Todos os direitos reservados.</p>
                 <p style="margin-top: 1rem; font-size: 0.8rem;">&copy; 2024 Saludave. Todos os direitos reservados.</p>
             </div>
         </div>
