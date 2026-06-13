@@ -470,7 +470,7 @@
             <span class="close-popup" id="close-popup">&times;</span>
             <h2>🎉 Oferta Especial!</h2>
             <p>Ganhe 10% de desconto se fizer sua inscrição agora!</p>
-            <button class="cta-button" style="margin-top: 1rem;">Quero Desconto</button>
+            <button class="cta-button" id="btn-desconto" style="margin-top: 1rem;">Quero Desconto</button>
         </div>
     </div>
 
@@ -507,12 +507,21 @@
         observer.observe(document.querySelector('.stats'));
 
         // Popup logic
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('close-popup');
+        const btnDesconto = document.getElementById('btn-desconto');
+
         setTimeout(() => {
-            document.getElementById('popup').style.display = 'flex';
+            popup.style.display = 'flex';
         }, 5000);
 
-        document.getElementById('close-popup').onclick = () => {
-            document.getElementById('popup').style.display = 'none';
+        closePopup.onclick = () => {
+            popup.style.display = 'none';
+        };
+
+        btnDesconto.onclick = () => {
+            popup.style.display = 'none';
+            window.location.hash = 'contato';
         };
     </script>
 </body>
